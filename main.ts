@@ -1,20 +1,45 @@
 input.onButtonPressed(Button.A, function () {
-    if (showing_the_time == 0) {
-        showing_the_time = 1
-        basic.clearScreen()
-        basic.showString("" + (hour))
-        basic.pause(100)
-        basic.showString("" + (minute))
-        showing_the_time = 0
-    }
+    showing_the_time = 1
+    basic.clearScreen()
+    basic.showString("" + (hour))
+    basic.pause(100)
+    basic.showString("" + (minute))
+    showing_the_time = 0
+})
+input.onButtonPressed(Button.B, function () {
+    showing_the_time = 2
+    basic.clearScreen()
+    basic.showString("" + (date_day))
+    basic.showLeds(`
+        . . . . #
+        . . . # .
+        . . # . .
+        . # . . .
+        # . . . .
+        `)
+    basic.showString("" + (date_month))
+    basic.showLeds(`
+        . . . . #
+        . . . # .
+        . . # . .
+        . # . . .
+        # . . . .
+        `)
+    basic.clearScreen()
+    basic.pause(500)
+    basic.showString("" + (date_year))
+    showing_the_time = 0
 })
 let minute = 0
 let showing_the_time = 0
+let date_year = 0
+let date_month = 0
+let date_day = 0
 let hour = 0
 hour = 610
-let date_day = 13
-let date_month = 9
-let date_year = 2022
+date_day = 13
+date_month = 9
+date_year = 2022
 basic.forever(function () {
     if (hour == 25) {
         date_day += 1
