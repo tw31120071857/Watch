@@ -1,22 +1,17 @@
 {
     "name": "watch",
-    "version": "0.0.0",
-    "description": "",
     "dependencies": {
         "core": "*",
-        "radio": "*",
         "microphone": "*"
     },
     "files": [
+        ".vscode/settings.json",
         "README.md",
         "main.blocks",
         "main.ts",
-        null
+        "test.ts",
+        "tsconfig.json"
     ],
-    "testFiles": [
-        "test.ts"
-    ],
-    "public": true,
     "targetVersions": {
         "target": "5.0.12",
         "targetId": "microbit"

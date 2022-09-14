@@ -47,8 +47,8 @@ input.onButtonPressed(Button.B, function () {
     }
 })
 input.onGesture(Gesture.Shake, function () {
+    Step_Tracker += 1
     if (page == 2) {
-        Step_Tracker += 1
         if (Showing_Step_Count == 1) {
             basic.showString("" + (Step_Tracker))
         }
@@ -64,7 +64,7 @@ let date_month = 0
 let date_day = 0
 let hour = 0
 hour = 610
-date_day = 13
+date_day = 14
 date_month = 9
 date_year = 2022
 // 1 = Clock
@@ -77,6 +77,7 @@ Showing_Step_Count = 0
 basic.forever(function () {
     if (hour == 25) {
         date_day += 1
+        hour = 1
     }
     if (date_month == 13) {
         date_year += 1
@@ -160,14 +161,6 @@ basic.forever(function () {
 basic.forever(function () {
     basic.pause(60000)
     minute += 1
-})
-basic.forever(function () {
-    if (minute == 60) {
-        hour += 1
-    }
-    if (hour == 13) {
-        hour = 1
-    }
 })
 basic.forever(function () {
     if (minute == 60) {
