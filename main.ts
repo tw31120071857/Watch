@@ -54,7 +54,6 @@ input.onGesture(Gesture.Shake, function () {
         }
     }
 })
-let minute = 0
 let showing_the_time = 0
 let Showing_Step_Count = 0
 let Step_Tracker = 0
@@ -62,8 +61,10 @@ let page = 0
 let date_year = 0
 let date_month = 0
 let date_day = 0
+let minute = 0
 let hour = 0
-hour = 610
+hour = 7
+minute = 57
 date_day = 14
 date_month = 9
 date_year = 2022
